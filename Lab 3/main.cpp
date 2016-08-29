@@ -13,6 +13,9 @@ using namespace std;
 void MergeSort_Best();
 void MergeSort_Worst();
 void MergeSort_Average();
+void Improved_MergeSort_Best();
+void Improved_MergeSort_Worst();
+void Improved_MergeSort_Average();
 void QuickSort_Worst();
 void QuickSort_Average();
 
@@ -83,17 +86,17 @@ int main(){
 	vector<int> list(10);
 	Random_List(list);
 	Print_List(list);
-	MergeSort(list, 0, 9);
+	mergeSort(list, 0, 9);
 	Print_List(list);
 }
 
 
 void MergeSort_Best(){
-	
+	//TODO
 }
 
 void MergeSort_Worst(){
-	
+	//TODO
 }
 
 void MergeSort_Average(){
@@ -106,7 +109,7 @@ void MergeSort_Average(){
         Random_List(list);
 
         double start = omp_get_wtime();
-            MergeSort(list, 0,n-1);
+            mergeSort(list, 0,n-1);
         double end = omp_get_wtime();
         
         cout << "List size: " << n << " ,  Sort time: " << end-start << endl;
@@ -114,6 +117,18 @@ void MergeSort_Average(){
         file << n << "," << end-start << endl;
         file.close();
     }
+}
+
+void Improved_MergeSort_Best(){
+    //TODO
+}
+
+void Improved_MergeSort_Worst(){
+    //TODO
+}
+
+void Improved_MergeSort_Average(){
+    //TODO
 }
 
 void QuickSort_Worst(){
@@ -126,7 +141,7 @@ void QuickSort_Worst(){
         List_Increasing(list);
 
         double start = omp_get_wtime();
-            QuickSort(list, 0,n-1);
+            quickSort(list, 0,n-1);
         double end = omp_get_wtime();
         
         cout << "List size: " << n << " ,  Sort time: " << end-start << endl;
@@ -146,7 +161,7 @@ void QuickSort_Average(){
         Random_List(list);
 
         double start = omp_get_wtime();
-            QuickSort(list, 0,n-1);
+            quickSort(list, 0,n-1);
         double end = omp_get_wtime();
         
         cout << "List size: " << n << " ,  Sort time: " << end-start << endl;
