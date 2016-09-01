@@ -1,6 +1,10 @@
 #include <vector>
 using namespace std;
 
+	void QuickSort(vector<int> &list, int left, int right);
+	void mergeSort(vector<int> &list, int left, int right);
+	void improved_mergeSort(vector<int> &list, int left, int right);
+
     int Linear_Search(vector<int> list, int key){
 		int index = -1;
 		for(int i = 0;i < list.size();i++){
@@ -190,8 +194,8 @@ using namespace std;
 		if(right-left > 0){
 			vector<int> temp(list.size());
 			int mid = (left + right)/2;
-			MergeSort(list, left, mid);
-			MergeSort(list, mid + 1, right);
+			mergeSort(list, left, mid);
+			mergeSort(list, mid + 1, right);
 
 			for(int i = mid;i >= left;i--){
 				temp[i] = list[i];
@@ -222,8 +226,8 @@ using namespace std;
 		if(right-left > 0){
 			vector<int> temp(list.size());
 			int mid = (left + right)/2;
-			ImprovedMergeSort(list, left, mid);
-			ImprovedMergeSort(list, mid + 1, right);
+			improved_mergeSort(list, left, mid);
+			improved_mergeSort(list, mid + 1, right);
 
 			for(int i = mid;i >= left;i--){
 				temp[i] = list[i];
