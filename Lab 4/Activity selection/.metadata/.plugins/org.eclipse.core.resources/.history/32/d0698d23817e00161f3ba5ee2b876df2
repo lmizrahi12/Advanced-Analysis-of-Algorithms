@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Program {
+	public static void main(String args[]){
+		Scanner in = new Scanner(System.in);
+		ArrayList<Integer> start = new ArrayList<Integer>();
+		ArrayList<Integer> end = new ArrayList<Integer>();
+		
+		System.out.println("Enter activities with their start and finish times  '<start_time> <end_time>'");
+		System.out.println("Enter 'END' to stop:");
+		
+		String input = in.nextLine();
+		while(!input.equals("END")){
+			String[] str = input.split(" ");
+			start.add(Integer.parseInt(str[0]));
+			end.add(Integer.parseInt(str[1]));
+		}
+	}
+}

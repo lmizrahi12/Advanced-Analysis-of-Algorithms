@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+D:\Coms\Advanced-Analysis-of-Algorithms\Lab 4\Min waiting time\.metadata\.plugins\org.eclipse.jdt.core
+1045976417.index

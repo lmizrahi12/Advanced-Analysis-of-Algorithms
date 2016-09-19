@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Program {
+	public static void main(String args[]){
+		Scanner in = new Scanner(System.in);
+		
+		ArrayList<Integer> times = new ArrayList<Integer>();
+		
+		System.out.println("Enter waiting times. Enter -1 to stop:");
+		
+		int time = in.nextInt();
+		while(time != -1){
+			
+		}
+	}
+	
+	public static void quickSort(int[] arr, int low, int high) {
+		if (arr == null || arr.length == 0)
+			return;
+ 
+		if (low >= high)
+			return;
+ 
+		
+		int middle = low + (high - low) / 2;
+		int pivot = arr[middle];
+ 
+		
+		int i = low, j = high;
+		while (i <= j) {
+			while (arr[i] < pivot) {
+				i++;
+			}
+ 
+			while (arr[j] > pivot) {
+				j--;
+			}
+ 
+			if (i <= j) {
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+				i++;
+				j--;
+			}
+		}
+ 
+		
+		if (low < j)
+			quickSort(arr, low, j);
+ 
+		if (high > i)
+			quickSort(arr, i, high);
+	}
+}

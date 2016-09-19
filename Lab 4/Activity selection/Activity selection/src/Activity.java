@@ -1,0 +1,19 @@
+
+public class Activity implements Comparable<Activity>{
+
+	Integer start;
+	Integer end;
+	
+	public Activity(int startTime, int endTime){
+		this.start = startTime;
+		this.end = endTime;
+	}
+	
+	public int compareTo(Activity other) {
+		if(this.end == other.end)
+			return this.start.compareTo(other.start);
+		else
+			return this.end.compareTo(other.end);
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public class Activity implements Comparable<Activity>{
+
+	public int compareTo(Activity arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
